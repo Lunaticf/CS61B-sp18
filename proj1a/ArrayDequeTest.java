@@ -104,6 +104,20 @@ public class ArrayDequeTest {
         System.out.println(lld1.get(0));
     }
 
+    public static void fill() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<>();
+        for (int i = 0; i < 18; i++) {
+            lld1.addFirst(i);
+        }
+        for (int i = 0; i < 18; i++) {
+            lld1.removeFirst();
+        }
+        for (int i = 0; i < 18; i++) {
+            lld1.addFirst(i);
+        }
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -111,7 +125,9 @@ public class ArrayDequeTest {
 //        addIsEmptySizeTest();
 //        addRemoveTest();
 //        addTest();
-        addGetTest();
+//        addGetTest();
+        fill();
+
     }
 
 }
