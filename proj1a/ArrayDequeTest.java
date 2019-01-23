@@ -121,12 +121,12 @@ public class ArrayDequeTest {
 
 
     public static void main(String[] args) {
-//        System.out.println("Running tests.\n");
-//        addIsEmptySizeTest();
-//        addRemoveTest();
-//        addTest();
-//        addGetTest();
-        fill();
+        System.out.println("Running tests.\n");
+        addIsEmptySizeTest();
+        addRemoveTest();
+        addTest();
+        addGetTest();
+//        fill();
 
     }
 

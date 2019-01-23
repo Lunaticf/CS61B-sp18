@@ -17,11 +17,11 @@ public class ArrayDeque<T> {
 
     /** "plus one" in circle */
     private int plusOne(int index) {
-        index += 1;
-        if (index >= items.length) {
-            index = index % items.length;
-        }
-        return index;
+        return plusNum(index, 1);
+    }
+
+    private int plusNum(int index, int num) {
+        return (index + num) % items.length;
     }
 
 
@@ -117,11 +117,7 @@ public class ArrayDeque<T> {
     }
 
     public T get(int index) {
-        int start = plusOne(nextFirst);
-        for (int i = 0; i < index; i++) {
-            start = plusOne(start);
-        }
-        return items[start];
+        return items[plusNum(nextFirst, index + 1)];
     }
 
     public void printDeque() {
