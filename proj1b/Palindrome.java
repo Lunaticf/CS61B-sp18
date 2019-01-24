@@ -14,10 +14,11 @@ public class Palindrome {
         int i = 0;
         int j = word.length() - 1;
         while (i < j) {
-            if(!cc.equalChars(word.charAt(i), word.charAt(j))) {
+            if (!cc.equalChars(word.charAt(i), word.charAt(j))) {
                 return false;
             }
-            ++i;--j;
+            ++i;
+            --j;
         }
         return true;
     }

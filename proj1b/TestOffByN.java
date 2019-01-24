@@ -2,10 +2,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestOffByN {
+    static CharacterComparator offByN;
+
     @Test
     public void testEqualChars() {
-        CharacterComparator cc = new OffByN(5);
-        assertTrue(cc.equalChars('a', 'f'));
-        assertFalse(cc.equalChars('h', 'f'));
+        offByN = new OffByN(5);
+        assertTrue(offByN.equalChars('a', 'f'));
+        assertFalse(offByN.equalChars('h', 'f'));
     }
 }
